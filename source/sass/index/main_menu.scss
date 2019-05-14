@@ -1,0 +1,113 @@
+@import "../modules/variables.scss";
+@import "../modules/mixin.scss";
+
+.main_menu {
+  @include reset;
+  list-style: none;
+  color: $bold;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.header__logo {
+  width: 101px;
+  height: 18px;
+}
+
+.main_menu__link {
+  padding: 24px 0;
+
+  box-shadow:0 1px 0 0 $shadow-color;
+
+  position: relative;
+  a {
+    color:inherit;
+  }
+}
+
+.main_menu__button {
+  width: 24px;
+  height: 18px;
+
+  padding: 0;
+
+  position: absolute;
+  right: 20px;
+  bottom: 25px;
+
+  border:none;
+  box-shadow: none;
+  background-color: inherit;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  .burger-menu {
+    width: 24px;
+    height: 2px;
+
+    background-color: $bold;
+
+    transition: all 0.3s;
+
+    &::after {
+      content:"";
+      width: 24px;
+      height: 2px;
+
+      background-color: $bold;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      transition: all 0.3s;
+    }
+
+    &::before {
+      content:"";
+      width: 24px;
+      height: 2px;
+
+      background-color: $bold;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      transition: all 0.3s;
+    }
+  }
+
+  &--active .burger-menu {
+    height: 0;
+
+    &:after {
+      transform: rotate(45deg);
+      top: 8px;
+    }
+
+    &:before {
+      transform: rotate(-45deg);
+      bottom: 8px;
+    }
+  }
+}
+
+.main_menu__link:not(:first-child) {
+  display: none;
+}
+
+.main_menu--js .main_menu__link:not(:first-child) {
+  display: block;
+}
+
+.main_menu--no-js .main_menu__link:not(:first-child) {
+  display: block;
+}
