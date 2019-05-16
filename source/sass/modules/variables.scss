@@ -1,7 +1,13 @@
 $body-font-color:#444444;
 $bold:#111111;
 $shadow-color:#e6e6e6;
+$link-active-color:#68b738;
+$link-color:#ffffff;
 
 // widths
 $tablet-width:768px;
 $desktop-width:1200px;
+
+// dpi dppx
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

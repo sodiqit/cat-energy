@@ -111,3 +111,97 @@
 .main_menu--no-js .main_menu__link:not(:first-child) {
   display: block;
 }
+
+.header__logo-link {
+  &::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: 11px;
+    left: 20px;
+
+    width: 33px;
+    height: 38px;
+
+    background-image:url(../images/mobile/logo-mobile.svg);
+  }
+}
+
+@media (min-width:$tablet-width) {
+  .main_menu {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: normal;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+
+  .header__logo {
+    width: 173px;
+    height: 58px;
+  }
+
+  .main_menu__link {
+    box-shadow:0 0 0 0;
+
+    margin-right: 36px;
+    padding-bottom: 12px;
+    &--logo {
+      margin-right: auto;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+
+        width: 100%;
+        height: 2px;
+
+        background-color: $link-active-color;
+      }
+    }
+  }
+
+  .main_menu__button {
+    display: none;
+  }
+
+  .main_menu__link:not(:first-child) {
+    display: block;
+  }
+
+
+  .header__logo-link {
+    &::after {
+      background-image:none;
+    }
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .main_menu {
+    font-size: 20px;
+    color:$link-color;
+  }
+
+  .header__logo {
+    width: 202px;
+    height: 59px;
+  }
+
+  .main_menu__link--active {
+    &::before {
+      background-color: $link-color;
+    }
+  }
+}

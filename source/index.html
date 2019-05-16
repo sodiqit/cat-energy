@@ -13,16 +13,20 @@
   <header class="page-header">
     <div class="container">
       <ul class="main_menu main_menu--no-js">
-        <li class="main_menu__link">
-          <a href="#">
-            <img class="header__logo" src="images/mobile/logo-mobile-1.svg" alt="Логотип Cat-energy">
-            <button class="main_menu__button">
-              <span class="burger-menu"></span>
-              <span class="visually-hidden">Открыть меню</span>
-            </button>
+        <li class="main_menu__link main_menu__link--logo">
+          <a href="#" class="header__logo-link">
+            <picture>
+              <source media="(min-width:1250px)" srcset="images/desktop/logo-desktop.svg">
+              <source media="(min-width:768px)" srcset="images/tablet/logo-tablet.svg">
+              <img class="header__logo" src="images/mobile/logo-mobile-1.svg" alt="Логотип Cat-energy">
+            </picture>
           </a>
+          <button class="main_menu__button">
+            <span class="burger-menu"></span>
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
         </li>
-        <li class="main_menu__link">
+        <li class="main_menu__link main_menu__link--active">
           <a href="#">Главная</a>
         </li>
         <li class="main_menu__link">
@@ -35,17 +39,6 @@
     </div>
   </header>
 
-  <script>
-    var button = document.querySelector(".main_menu__button");
-    var menu = document.querySelector(".main_menu");
-
-    menu.classList.remove("main_menu--no-js");
-
-    button.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      button.classList.toggle("main_menu__button--active");
-      menu.classList.toggle("main_menu--js");
-    });
-  </script>
+  <script src="js/menu.js"></script>
 </body>
 </html>
