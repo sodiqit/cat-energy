@@ -1,0 +1,173 @@
+@import "../modules/variables.scss";
+@import "../modules/mixin.scss";
+
+.header-page-main {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.main__title-bg {
+  background-color: $link-active-color;
+  background-image: url(../images/mobile/index-background-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin-bottom: 135px;
+}
+
+.main__title {
+  font-size: 36px;
+  color:$link-color;
+  line-height: 36px;
+  font-weight: normal;
+  font-style: normal;
+
+  margin-bottom: 19px;
+  margin-top: 0;
+  padding-top: 29px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 280px;
+    height: 270px;
+
+    position: absolute;
+    top: 167px;
+    left: 50%;
+    transform: translate(-50%);
+
+    background-image: url(../images/mobile/index-can-mobile.png);
+    background-repeat: no-repeat;
+  }
+}
+
+.main__description {
+  display: block;
+
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 14px;
+  text-transform: uppercase;
+
+  color:$link-color;
+
+  padding-bottom: 167px;
+}
+
+.main__programm {
+  margin: 0 auto;
+}
+
+@media (min-width:$tablet-width) {
+  .header-page-main {
+    text-align: left;
+
+    margin-bottom: 544px;
+    padding-left: 90px;
+  }
+
+  .main__title-bg {
+    background-color: transparent;
+    background-image: none;
+
+    margin-bottom: 48px;
+  }
+
+  .main__title {
+    font-size: 60px;
+    color:$bold;
+    line-height: 60px;
+
+    margin-bottom: 32px;
+    margin-top: 19px;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 709px;
+      height: 609px;
+
+      position: absolute;
+      z-index: -1;
+      top: 29px+75px+122px;
+      left: -11vw;
+      transform: translateX(0);
+
+      background-image: url(../images/tablet/index-can-tablet.png);
+    }
+  }
+
+  .main__description {
+    font-size: 20px;
+    line-height: 20px;
+
+    color:$bold;
+
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  .main__programm {
+    width: 245px;
+    height: 52px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    margin: 0;
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .header-page-main {
+    margin: 0;
+    margin-bottom: 283px;
+  }
+
+  .main__title-bg {
+    margin-bottom: 53px;
+    &::before {
+      content:"";
+      display: block;
+      width: 50vw;
+      height: 696px;
+
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -2;
+
+      background-image: url(../../images/desktop/index-background-desktop.jpg.jpg);
+      background-color: $link-active-color;
+      background-repeat: no-repeat;
+      background-position: -60% 50%;
+      background-size: cover;
+    }
+  }
+
+  .main__title {
+    margin-bottom: 33px;
+    margin-top: 100px;
+    padding-top: 0;
+
+    color:$bold;
+
+    &::before {
+      content: "";
+      width: 552px;
+      height: 499px;
+
+      position: absolute;
+      z-index: -1;
+      top: -84px;
+      left: 364px;
+
+      background-image: url(../images/tablet/index-can.png);
+    }
+  }
+}
