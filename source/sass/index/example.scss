@@ -1,0 +1,93 @@
+@import "../modules/variables.scss";
+@import "../modules/mixin.scss";
+
+.example {
+  padding: 0 20px;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  margin-bottom: 30px;
+
+  background-color: $gray;
+}
+
+.example__title {
+  @include reset;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 60px;
+
+  margin-bottom: 23px;
+}
+
+.example__description {
+  @include reset;
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 18px;
+
+  margin-bottom: 24px;
+}
+
+.example__after {
+  display: none;
+
+  margin-bottom: 35px;
+}
+
+.example__before {
+  margin-bottom: 35px;
+}
+
+.example__info {
+  margin-bottom: 44px;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example__total {
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 24px;
+  color:$bold;
+
+  border: 1px solid $border-color;
+
+  border-radius: 3px;
+
+  padding: 18px 0;
+  flex-basis: 124px;
+  margin-right: 32px;
+
+  &--nomr {
+    margin-right: 0;
+  }
+}
+
+.value {
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 12px;
+
+  text-align: center;
+
+  width: 88px;
+
+  &--1 {
+    position: relative;
+    z-index: 1;
+    top: -13px;
+    left: 18px;
+
+    background-color: $gray;
+
+    padding: 0 16px;
+  }
+}
+
+.price {
+  flex-grow: 1;
+}
