@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,13 +54,14 @@
       <ul class="index-catalog">
         <li class="index-catalog__item">
           <h2 class="index-catalog__title index-catalog__title--cat">Похудение</h2>
-          <p class="index-catalog__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+          <p class="index-catalog__description">Ваш кот весит больше собаки и почти утратил способность лазить по
+            деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a href="catalog.html" class="index-catalog__link">Каталог Slim</a>
         </li>
         <li class="index-catalog__item">
           <h2 class="index-catalog__title index-catalog__title--puma">Набор Массы</h2>
           <p class="index-catalog__description">Заработать авторитет среди дворовых котов и даже собак?
-          Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a href="catalog.html" class="index-catalog__link">Каталог Pro</a>
         </li>
       </ul>
@@ -69,41 +71,57 @@
       <div class="container">
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
-          <li class="advantages__list__item advantages__list__item--1">Функциональное питание содержит только полезные питательные вещества.</li>
-          <li class="advantages__list__item advantages__list__item--2">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
-          <li class="advantages__list__item advantages__list__item--3">Замените один-два приема обычной еды на наше функциональное питание.</li>
-          <li class="advantages__list__item advantages__list__item--4">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+          <li class="advantages__list__item advantages__list__item--1">Функциональное питание содержит только полезные
+            питательные вещества.</li>
+          <li class="advantages__list__item advantages__list__item--2">Выпускается в виде порошка, который нужно лишь
+            залить кипятком и готово.</li>
+          <li class="advantages__list__item advantages__list__item--3">Замените один-два приема обычной еды на наше
+            функциональное питание.</li>
+          <li class="advantages__list__item advantages__list__item--4">Уже через месяц наслаждайтесь изменениями к
+            лучшему вашего питомца!</li>
         </ul>
       </div>
     </section>
 
     <section class="example">
-      <h2 class="example__title">Живой пример</h2>
-      <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-      <div class="example__info">
+      <div class="container">
+          <h2 class="example__title">Живой пример</h2>
+          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+            Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
+            часов в день.</p>
+          <div class="example__info">
             <span class="example__total">5 кг</span>
             <span class="example__total example__total--nomr">60 дней</span>
             <span class="value value--1">снижение веса</span>
             <span class="value value--2">затрачено времени</span>
             <span class="price">Затраты на питание: 15 000 руб.</span>
+          </div>
+          <div class="picture-container">
+            <picture>
+              <source media="(min-width:768px)" srcset="images/tablet/before-desktop.png">
+              <img style="clip: rect(0px, 350px, 690px, 0px);" src="./images/mobile/before-mobile.png" alt="Было" class="example__before"
+                srcset="images/mobile/before-mobile@2x.png 2x">
+            </picture>
+            <picture>
+              <source media="(min-width:768px)" srcset="images/tablet/after-desktop.png">
+              <img style="clip: rect(0px, 600px, 690px, 348px);" src="./images/mobile/after-mobile.png" alt="Стало" class="example__after"
+                srcset="images/mobile/after-mobile@2x.png 2x">
+            </picture>
+          </div>
+
+          <div class="slider">
+            <div class="before">Было</div>
+            <div class="example__checkbox">
+              <div class="inner-check"></div>
+            </div>
+            <div class="after">Стало</div>
+          </div>
       </div>
-      <picture>
-        <source media="(min-width:768px)" srcset="images/tablet/before-desktop.png">
-        <img src="./images/mobile/before-mobile.png" alt="Было" class="example__before" srcset="images/mobile/before-mobile@2x.png 2x">
-      </picture>
-      <picture>
-        <source media="(min-width:768px)" srcset="images/tablet/after-desktop.png">
-        <img src="./images/mobile/after-mobile.png" alt="Стало" class="example__after" srcset="images/mobile/after-mobile@2x.png 2x">
-      </picture>
-      <label>
-        <input type="checkbox" name="before" class="visually-hidden">
-        <span class="before">Было</span>
-        <span class="example__checkbox"></span>
-        <span class="after">Стало</span>
-      </label>
     </section>
   </main>
 
   <script src="js/menu.js"></script>
+  <script src="./js/slider.js"></script>
 </body>
+
 </html>
