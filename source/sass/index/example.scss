@@ -342,13 +342,10 @@
 
 @media (min-width:$desktop-width) {
   .example {
-
+    padding-bottom: 59px;
     &::before {
-      content: "";
-      background: linear-gradient(to right, $gray 72.5%,$example-color 72.5%);
-
-      position: absolute;
-      top: 143px;
+      top: 159px;
+      height: 452px;
     }
   }
 
@@ -392,16 +389,15 @@
   }
 
   .column {
-    position: absolute;
-    top: -10%;
-    right: calc(25vw - 330px);
-
     width: 708px;
+    margin-top: -53px;
+    margin-left: 167px;
   }
 
   .picture-container {
     margin-bottom: 40px;
     margin-left: 0;
+    width: 708px;
   }
 
   .example__before {
@@ -417,6 +413,22 @@
   .example__checkbox {
     .inner-check {
       left: 183px;
+    }
+    margin: 0 20px;
+  }
+
+  .example .container {
+    display: flex;
+    align-items: center;
+    &::before {
+      content: "";
+      background: linear-gradient(to right, $gray 935px,$example-color 935px);
+
+      position: absolute;
+      top: 159px;
+
+      width: 1300px;
+      height: 452px;
     }
   }
 }
